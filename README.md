@@ -17,6 +17,14 @@ All the other PIIs are obtained by an in-house software based on regular express
 
 The tool is able to extract PIIs in 5 languages: English, Czech, German, Italian, Latvian. More languages will be added during the project.
 
+The ways to access the tool are:
+-) a web interface
+-) an API
+
+The interface makes avaialable to the user a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email addresse to which the output of the tool is sent. The aim of the interface is to test the tool.
+
+The API allows a user to create a direct contection with the tool and to process a singe TU at the time. More details about the API specifications are avaialble below.
+
 
 ## Installation and Usage
 
@@ -89,7 +97,7 @@ produces the response:
 ```
 
 
-## API
+## API specifications
 
 [The API specs of the Anonymization Service are available here](https://drive.google.com/file/d/1QXJmeA0A3af3rwxaie1e6RaLJjFwyrbo/view?usp=sharing)
 
@@ -106,8 +114,6 @@ FBK and Translated developed the Anonymization Service:
 
 Please email cattoni AT fbk DOT eu
 
-
-Info: v1.0, 2020/10/14
 
 
 
