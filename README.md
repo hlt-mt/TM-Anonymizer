@@ -17,7 +17,7 @@ All the other PIIs are obtained by in-house software based on regular expression
 
 The tool is able to extract PIIs in 5 languages: English, Czech, German, Italian, Latvian. More languages will be added during the project.
 
-The tool is accessible by an API that allows a user to create a direct connection with the tool and to process a singe TU at the time. More details about the API specifications are available below.
+The tool is accessible by an API that allows a user to process one or multiple TUs at the time. More details about the API specifications are available below.
 
 
 ## Installation and Usage
