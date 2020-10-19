@@ -11,7 +11,7 @@ person names, emails, URLs, addresses, phone numbers, credit card numbers, drive
 ## The tool
 The tool includes two different libraries to extract the required PIIs from the source and target language texts. 
 
-The person names are extracted using the [DeepPavlov NER tool] (https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on Multilingual BERT adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
+The person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on Multilingual BERT adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
 
 All the other PIIs are obtained by an in-house software based on regular expressions and language-specific knowledge and patterns.
 
