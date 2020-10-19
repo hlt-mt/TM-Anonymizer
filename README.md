@@ -13,7 +13,7 @@ The tool includes two different libraries to extract the required PIIs from the 
 
 The person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
 
-All the other PIIs are obtained by an in-house software based on regular expressions and language-specific knowledge and patterns.
+All the other PIIs are obtained by in-house software based on regular expressions and language-specific knowledge and patterns.
 
 The tool is able to extract PIIs in 5 languages: English, Czech, German, Italian, Latvian. More languages will be added during the project.
 
@@ -35,7 +35,7 @@ To start the service, run the following command:
 $ docker run --rm -it --publish 8080:8080 anonymization_service
 ```
 
-The process prints several information, when it prints the message
+The process prints different information, when it prints the message
 ```bash
 web service ready at port 8080
 ```
@@ -97,7 +97,7 @@ produces the response:
 
 ## Web Interface
 
-To test the tool, a web interface is made avaialble in the Docker. It consists in a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email address to which the output of the tool is sent. 
+To test the tool, a web interface is made available in the Docker. It consists of a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email address to which the output of the tool is sent. 
 
 ## Credits
 
