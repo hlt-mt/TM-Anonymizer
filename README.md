@@ -11,19 +11,13 @@ person names, emails, URLs, addresses, phone numbers, credit card numbers, drive
 ## The tool
 The tool includes two different libraries to extract the required PIIs from the source and target language texts. 
 
-The person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on Multilingual BERT adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
+The person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
 
 All the other PIIs are obtained by an in-house software based on regular expressions and language-specific knowledge and patterns.
 
 The tool is able to extract PIIs in 5 languages: English, Czech, German, Italian, Latvian. More languages will be added during the project.
 
-The ways to access the tool are:
--) a web interface
--) an API
-
-The interface makes avaialable to the user a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email addresse to which the output of the tool is sent. The aim of the interface is to test the tool.
-
-The API allows a user to create a direct contection with the tool and to process a singe TU at the time. More details about the API specifications are avaialble below.
+The tool is accessible by an API that allows a user to create a direct connection with the tool and to process a singe TU at the time. More details about the API specifications are available below.
 
 
 ## Installation and Usage
@@ -101,7 +95,9 @@ produces the response:
 
 [The API specs of the Anonymization Service are available here](https://drive.google.com/file/d/1QXJmeA0A3af3rwxaie1e6RaLJjFwyrbo/view?usp=sharing)
 
+## Web Interface
 
+To test the tool, a web interface is made avaialble in the Docker. It consists in a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email address to which the output of the tool is sent. 
 
 ## Credits
 
