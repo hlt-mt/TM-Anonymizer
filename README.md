@@ -95,14 +95,14 @@ produces the response:
 
 [The API specs of the Anonymization Service are available here](https://drive.google.com/file/d/1QXJmeA0A3af3rwxaie1e6RaLJjFwyrbo/view?usp=sharing)
 
-## Web Interface
+## Web GUI (Graphical User Interface)
 
-To test the tool, a web interface is made available in the Docker. It consists of a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The interface allows the user to provide an email address to which the output of the tool is sent. 
+To test the tool, a web graphical interface is made available in the Docker. It consists of a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The GUI allows the user to provide an email address to which the output of the tool is sent. 
 
 ## Credits
 
 FBK and Translated developed the Anonymization Service:
-* FBK for the web service, interface with MBERT/DeepPavlov (NE processing) and integration;
+* FBK for the web service, interface with MBERT/DeepPavlov (NE processing), web GUI and integration;
 * Translated for the Translated Anonymizer component (PII processing).
 
 
