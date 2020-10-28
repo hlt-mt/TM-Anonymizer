@@ -1,17 +1,17 @@
 # TM-Anonymizer
-This repository contains the software to run the Translation Memory anonymizer service developed during the CEF Data MarketPlace project. 
+This repository contains the software to run the Translation Memory anonymization service developed within the [CEF Data MarketPlace project](https://www.datamarketplace.eu). A service based on this tool is offered by the TAUS Data MarketPlace platform.
 
 The goal of the tool is to protect private information possibly contained in TMs uploaded to the Marketplace. This is obtained by detecting Personally Identifiable Information (PII) in the source and target-language sides of a translation memory. 
 
-A PII is any data that could potentially identify a specific individual. The identified PIIs by the tool are: 
+A PII is any data that could potentially identify a specific individual. The PIIs identified by the tool are: 
 
-person names, emails, URLs, addresses, phone numbers, credit card numbers, driver’s license numbers, identity card numbers, passport numbers, social security numbers, license plate numbers.
+person names, emails, URLs, phone numbers, credit card numbers, driver’s license numbers, identity card numbers, passport numbers, social security numbers, license plate numbers.
 
 
 ## The tool
 The tool includes two different libraries to extract the required PIIs from the source and target language texts. 
 
-The person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
+Person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
 
 All the other PIIs are obtained by in-house software based on regular expressions and language-specific knowledge and patterns.
 
