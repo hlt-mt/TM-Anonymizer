@@ -24,6 +24,7 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 The Docker image of the code is available [here](https://github.com/hlt-mt/TM-Anonymizer)  (around 3GB) 
 
+No specific hardware or software is required (only the optional "email" functionality requires an email sending service running on the host)
 
 Once the Docker image has been downloaded, it has to be added to your docker environment
 ```bash
