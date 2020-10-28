@@ -32,7 +32,7 @@ $ docker load < image.anonymization_service.tar.gz
 
 To start the service, run the following command:
 ```bash
-$ docker run --rm -it --publish 8080:8080 anonymization_service
+$ docker run --rm -it --net=host anonymization_service
 ```
 
 The process prints different information, when it prints the message
