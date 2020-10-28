@@ -22,7 +22,7 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 ## Installation and Usage
 
-The Docker image of the code is available here  (around 3GB) 
+The Docker image of the code is available [here](https://github.com/hlt-mt/TM-Anonymizer)  (around 3GB) 
 
 
 Once the Docker image has been downloaded, it has to be added to your docker environment
