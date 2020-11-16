@@ -31,5 +31,5 @@ EXPOSE 8080
 
 # run the command
 CMD ["bash", "CMD.httpserver_start.sh"]
-## CMD ["python3", "-u", "httpserver.py", "8080", "debug"]
+## CMD ["bash", "CMD.httpserver_start.sh", "dbg"]
 
