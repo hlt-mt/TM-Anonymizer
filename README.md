@@ -22,7 +22,7 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 ## Installation and Usage
 
-The Docker image of the code is available [here](https://drive.google.com/file/d/1mFLAWjqBLqjek0iazXRx8V2Xt8RE_0HA/view?usp=sharing)  (around 3GB) 
+The Docker image of the code is available [here](https://drive.google.com/file/d/1mFLAWjqBLqjek0iazXRx8V2Xt8RE_0HA/view?usp=sharing) or [here](https://drive.google.com/file/d/1P1feBsOSYCYnmSwOQUNhv2NykBGGxzOA/view?usp=sharing)  (around 3GB) 
 
 No specific hardware or software is required in addition to a working
 "docker" installation (only the optional "email" functionality requires an email sending service running on the host)
