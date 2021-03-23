@@ -110,11 +110,11 @@ To test the tool, a web graphical interface is made available in the Docker. It 
 
 In order to build the docker image, the steps are:
 1. download the archive [setup_for_docker_build_AS_image.tar.gz](https://drive.google.com/file/d/1oVYlfG7NewieV7Qe_xPCX16e5X0dvVMd/view?usp=sharing)
-1. extract the data from the archive
+2. extract the data from the archive
 ~~~
 tar cvfz setup_for_docker_build_AS_image.tar.gz
 ~~~
-1. run the script DO_build_AS_image.sh
+3. run the script DO_build_AS_image.sh
 ~~~
 bash DO_build_AS_image.sh
 ~~~
