@@ -105,6 +105,21 @@ produces the response:
 
 To test the tool, a web graphical interface is made available in the Docker. It consists of a simple web page, where a text can be inserted and it is processed by the tool returning the list of the identified PIIs. The GUI allows the user to provide an email address to which the output of the tool is sent. 
 
+
+## How to build the docker image
+
+In order to build the docker image, the steps are:
+1. download the archive [setup_for_docker_build_AS_image.tar.gz](https://drive.google.com/file/d/1oVYlfG7NewieV7Qe_xPCX16e5X0dvVMd/view?usp=sharing)
+1. extract the data from the archive
+~~~
+tar cvfz setup_for_docker_build_AS_image.tar.gz
+~~~
+1. run the script DO_build_AS_image.sh
+~~~
+bash DO_build_AS_image.sh
+~~~
+
+
 ## Credits
 
 FBK and Translated developed the Anonymization Service:
