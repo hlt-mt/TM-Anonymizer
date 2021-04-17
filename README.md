@@ -22,9 +22,8 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 ## Installation and Usage
 
-The Docker image of the code is available
-[here](https://drive.google.com/file/d/1mFLAWjqBLqjek0iazXRx8V2Xt8RE_0HA/view?usp=sharing)
-(around 3GB) 
+The first step is to download the Docker image of the code [image.anonymization_service__v2.tar.gz](https://drive.google.com/file/d/1zpdGG_mFtJcy7eLqGhfD19E4yI4f_fTQ/view?usp=sharing)
+(around 3GB)
 
 No specific hardware or software is required in addition to a working
 "docker" installation (only the optional "email" functionality requires an email sending service running on the host)
@@ -107,7 +106,7 @@ To test the tool, a web graphical interface is made available in the Docker. It 
 ## How to build the docker image
 
 In order to build the docker image, the steps are:
-1. download the archive [setup_for_docker_build_AS_image.tar.gz](https://drive.google.com/file/d/1oVYlfG7NewieV7Qe_xPCX16e5X0dvVMd/view?usp=sharing)
+1. download the archive [setup_for_docker_build_AS_image__v2.tar.gz](https://drive.google.com/file/d/1bTE4SIGs3GI8BoArz393W7x1NqxVzyfG/view?usp=sharing)
 2. extract the data from the archive
 ~~~
 tar xvfz setup_for_docker_build_AS_image.tar.gz
