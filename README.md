@@ -11,7 +11,7 @@ person names, emails, URLs, phone numbers, credit card numbers, driver’s licen
 ## The tool
 The tool includes two different libraries to extract the required PIIs from the source and target language texts. 
 
-Person names are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
+Person names and addresses are extracted using the [DeepPavlov NER tool](https://docs.deeppavlov.ai/en/master/features/models/ner.html). It is a hybrid model based on [Multilingual BERT](https://docs.deeppavlov.ai/en/master/features/models/bert.html) adapted for the named entity recognition task. Among all the possible types of entities, our tool selects only the persons. 
 
 All the other PIIs are obtained by in-house software based on regular expressions and language-specific knowledge and patterns.
 
@@ -22,15 +22,14 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 ## Installation and Usage
 
-The first step is to download the Docker image of the code [image.anonymization_service__v2.tar.gz](https://drive.google.com/file/d/1zpdGG_mFtJcy7eLqGhfD19E4yI4f_fTQ/view?usp=sharing)
-(around 3GB)
+The first step is to download the Docker image of the code [image.anonymization_service__v2.tar.gz](https://drive.google.com/file/d/14WF1F5MqmdEqO8KfHztBM-UIU9Z5Mx--/view?usp=sharing) (around 3GB)
 
 No specific hardware or software is required in addition to a working
 "docker" installation (only the optional "email" functionality requires an email sending service running on the host)
 
 Once the Docker image has been downloaded, it has to be added to your docker environment
 ```bash
-$ docker load < image.anonymization_service.tar.gz
+$ docker load < image.anonymization_service__v2.tar.gz
 ```
 
 To start the service, run the following command:
@@ -53,44 +52,55 @@ Requests can be issued at the following URLs:
 
 The request
 ```bash
-curl -X POST -F units='id1|en|credit cards 1234-XXXX-YYYY of mr. John Watson and of Jochen Mass|it|bla bla bla|id2|en|We recommend the sites bbc.co.uk and cnn.com|it|Paolo Rossi and Giuseppina Verdi propongono i siti agriturismo.it dolomiti.it solocane.net' http://localhost:8080/anonymize_service.php
+curl -X POST -F units='id1|en|credit card 5592-1234-5678-9876 of mr. John Watson and of Jochen Mass domiciled in Pennsylvania Avenue 44|it|bla bla bla|id2|en|We recommend the sites bbc.co.uk and cnn.com|it|Paolo Rossi and Giuseppina Verdi propongono i siti agriturismo.it dolomiti.it solocane.net' http://localhost:8080/anonymize_service.php
 ```
 produces the response:
 ```bash
-{"status": 0,
- "payload":
-   [{"id": "id1", "side": 0,
-     "annotations":
-       [{"type": "CREDITCARD",
-         "values":
-           ["1234-XXXX-YYYY", "6666-XXXX-YYYY", "7890-XXXX-YYYY"]
-        },
-        {"type": "PER",
-         "values":
-           ["John Watson", "Jochen Mass"]
-        }
-       ]
-    },
-    {"id": "id2", "side": 0,
-     "annotations":
-       [{"type": "URL",
-         "values":
-           [ "bbc.co.uk", "cnn.com"]
-        }]
-    },
-    {"id": "id2", "side": 1,
-     "annotations":
-       [{"type": "URL",
-         "values":
-           [ "agriturismo.it", "dolomiti.it", "solocane.net"]
-        },
-        {"type": "PER",
-         "values":
-           [ "Paolo Rossi", "Giuseppina Verdi"]
-        }
-       ]
-    }]
+{
+ "status": 0,
+ "payload": [
+     {
+         "id": "id1", "side": 0,
+         "annotations": [
+             {
+                 "type": "PER", 
+                 "values": ["John Watson", "Jochen Mass"]
+             }, 
+             {
+                 "type": "CREDITCARD", 
+                 "values": ["5592-1234-5678-9876"]
+             }, 
+             {
+                 "type": "ADDRESS", 
+                 "values": ["Pennsylvania Avenue 44"]
+             }
+         ]
+     }, 
+     {
+         "id": "id2", "side": 0,
+         "annotations": [
+             {
+                 "type": "URL", 
+                 "values": ["bbc.co.uk", "cnn.com"]
+             }
+         ]
+     }, 
+     {
+         "id": "id2", "side": 1,
+         "annotations": [
+             {
+                 "type": "PER", 
+                 "values": ["Paolo Rossi", "Giuseppina Verdi"]
+             }, 
+             {
+                 "type": "URL", 
+                 "values": ["agriturismo.it", "dolomiti.it", "solocane.net"]
+             }
+         ]
+     }
+ ] 
 }
+
 ```
 
 
@@ -106,7 +116,7 @@ To test the tool, a web graphical interface is made available in the Docker. It 
 ## How to build the docker image
 
 In order to build the docker image, the steps are:
-1. download the archive [setup_for_docker_build_AS_image__v2.tar.gz](https://drive.google.com/file/d/1bTE4SIGs3GI8BoArz393W7x1NqxVzyfG/view?usp=sharing)
+1. download the archive [setup_for_docker_build_AS_image__v2.tar.gz](https://drive.google.com/file/d/15HWWIroU9reGi4nTf4e_ZCG7N_sE0tWc/view?usp=sharing)
 2. extract the data from the archive
 ~~~
 tar xvfz setup_for_docker_build_AS_image.tar.gz
