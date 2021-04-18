@@ -15,7 +15,7 @@ Person names and addresses are extracted using the [DeepPavlov NER tool](https:/
 
 All the other PIIs are obtained by in-house software based on regular expressions and language-specific knowledge and patterns.
 
-The tool is able to extract PIIs in 5 languages: English, Czech, German, Italian, Latvian. More languages will be added during the project.
+The tool is able to extract PIIs in 24 languages: Albanian, Bulgarian, Croatian, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Norwegian (Bokmal), Norwegian (Nynorsk), Polish, Portuguese, Romanian, Spanish, Slovak, Swedish, Turkish.
 
 The tool is accessible by an API that allows a user to process one or multiple TUs at the time. More details about the API specifications are available below.
 
