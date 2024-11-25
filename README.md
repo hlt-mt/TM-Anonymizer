@@ -22,7 +22,7 @@ The tool is accessible by an API that allows a user to process one or multiple T
 
 ## Installation and Usage
 
-The first step is to download the Docker image of the code [image.anonymization_service__v2.tar.gz](https://drive.google.com/file/d/14WF1F5MqmdEqO8KfHztBM-UIU9Z5Mx--/view?usp=sharing) (around 3GB)
+The first step is to download the Docker image of the code [image.anonymization_service__v2.tar.gz](https://fbk.sharepoint.com/:u:/s/MTUnit/EXWYTg8zZ1NVAAPENE0T3ugBDh8WIwZt1jj0ypNpP-GDiA?e=eclGet) (around 3GB)
 
 No specific hardware or software is required in addition to a working
 "docker" installation (only the optional "email" functionality requires an email sending service running on the host)
